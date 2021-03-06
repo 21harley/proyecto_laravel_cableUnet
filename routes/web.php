@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',function () {
+    return "hola";
 });
+Route::get('/usuarios',[UserController::class,'index']);
+//Route::get('/usuarios/{id}','UserController@show')->where('id','[0-9]+');
